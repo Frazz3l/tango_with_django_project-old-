@@ -4,10 +4,10 @@ from rango.models import Category, Page
 
 
 class PageAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title','category', 'url')
     
 
 #registered models below
 admin.site.register(Category)
-admin.site.register(Page)
+admin.site.register(Page, PageAdmin)
 
